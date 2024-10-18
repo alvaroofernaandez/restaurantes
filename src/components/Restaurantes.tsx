@@ -90,25 +90,25 @@ export function Restaurantes() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="flex justify-center items-center mb-12">
+    <div className="min-h-screen px-4 py-12 bg-gray-900 sm:px-6 lg:px-8">
+      <div className="flex items-center justify-center mb-12">
         <h1 className="text-3xl font-bold text-center text-blue-200">
           Restaurantes
         </h1>
         <button
-          className="ml-4 p-2 bg-blue-600 text-white rounded hover:bg-blue-800 transition-all duration-300"
+          className="p-2 ml-4 text-white transition-all duration-300 bg-blue-600 rounded-full hover:bg-blue-800"
           onClick={() => setIsModalOpen(true)}
         >
           <FaPlus className="size-3" />
         </button>
       </div>
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl">
         {isLoading ? (
-          <div className="text-blue-200 text-center text-xl">
+          <div className="text-xl text-center text-blue-200">
             Cargando restaurantes...
           </div>
         ) : error ? (
-          <div className="text-red-500 text-center text-xl">
+          <div className="text-xl text-center text-red-500">
             {error}
           </div>
         ) : (
